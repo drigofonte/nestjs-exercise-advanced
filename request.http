@@ -1,0 +1,46 @@
+@baseUrl = http://localhost:3000
+
+### Sign up
+POST {{baseUrl}}/auth/signup
+Content-Type: application/json
+
+{
+    "email": "yet_another_me@email.com",
+    "password": "mybirthday"
+}
+
+### Sign user in
+POST {{baseUrl}}/auth/signin
+Content-Type: application/json
+
+{
+    "email": "another_me@email.com",
+    "password": "mybirthday"
+}
+
+### Sign out
+POST  {{baseUrl}}/auth/signout
+
+### Get me
+GET {{baseUrl}}/auth/me
+
+### Find all users
+GET {{baseUrl}}/auth
+
+### Find a user with ID
+GET {{baseUrl}}/auth/2
+
+### Find all users
+GET {{baseUrl}}/auth
+
+### Delete a user with ID
+DELETE {{baseUrl}}/auth/1
+
+### Update a user
+PATCH {{baseUrl}}/auth/2
+Content-Type: application/json
+
+{
+    "email": "update@email.com",
+    "foo": "bar"
+}
